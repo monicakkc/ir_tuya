@@ -1,0 +1,381 @@
+####################################################################################################
+#
+#    Exemplo dos botões de controle remoto
+#
+####################################################################################################
+
+      - type: vertical-stack
+        cards:
+          - type: custom:layout-card
+            layout: vertical    
+            cards:
+#              - type: vertical-stack
+#                cards:
+              - type: custom:layout-card
+                layout: vertical    
+                cards:
+                  - type: custom:button-card
+                    tap_action:
+                      action: none
+                    entity: media_player.samsung_un48h6400
+                    show_icon: false
+                    show_name: true
+                    hold_action:
+                      action: none
+                    icon: 'mdi:television'
+                    name: Tv Samsung 48
+                    show_state: 
+                    state:
+                      - styles:
+                          card:
+                            - filter: opacity(95%)
+                          state:
+                            - color: '#616161'
+                        value: 'off'
+                      - styles:
+                          card:
+                            - filter: opacity(40%)
+                            - color: '#5D4037'
+                        value: unavailable
+                      - styles:
+                          state:
+                            - color: var(--secondary-text-color)
+                        value: 'on'
+                    styles:
+                      card:
+                        - height: 20px
+                        - -webkit-box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - opacity: 0.8
+                      name:
+                        - font-weight: 500
+                        - font-size: 16px
+                      state:
+                        - font-size: 12px
+
+                  - type: glance
+                    show_name: false
+                    show_state: false
+                    columns: 3
+                    entities:
+                      - entity: scene.89lsgaaod2dth44f
+                        icon: 'mdi:menu'
+                        tap_action:
+                          action: call-service
+                          service_data:
+                            entity_id: scene.89lsgaaod2dth44f
+                          service: scene.turn_on   
+                      - entity: scene.4mlk0h4tt9xotlka   
+                        icon: 'hass:power' 
+                        tap_action:
+                          action: call-service
+                          service_data:
+                            entity_id: scene.4mlk0h4tt9xotlka
+                          service: scene.turn_on                                  
+                      - entity: scene.41ylaauz91tdltkf
+                        icon: 'mdi:home'
+                        tap_action:
+                          action: call-service
+                          service_data:
+                            entity_id: scene.41ylaauz91tdltkf
+                          service: scene.turn_on              
+                      - entity: scene.iiokp5uitzprrjrx
+                        icon: 'mdi:volume-minus'
+                        tap_action:
+                          action: call-service
+                          service_data:
+                            entity_id: scene.iiokp5uitzprrjrx
+                          service: scene.turn_on   
+                      - entity: scene.b7hk4xuehbb8bbfh
+                        icon: 'mdi:volume-off'
+                        tap_action:
+                          action: call-service
+                          service_data:
+                            entity_id: scene.b7hk4xuehbb8bbfh
+                          service: scene.turn_on   
+                      - entity: scene.0qwhmixgmqry2hmg
+                        icon: 'mdi:volume-plus'
+                        tap_action:
+                          action: call-service
+                          service_data:
+                            entity_id: scene.0qwhmixgmqry2hmg
+                          service: scene.turn_on   
+                      - entity: scene.z9agra281qn5at2s
+                        icon: 'mdi:exit-run'
+                        tap_action:
+                          action: call-service
+                          service_data:
+                            entity_id: scene.z9agra281qn5at2s
+                          service: scene.turn_on   
+                      - entity: scene.wbof1uct51ksyfag
+                        icon: 'mdi:none'
+                        tap_action:
+                          action: none
+                          service_data:
+                            entity_id: 
+                      - entity:  scene.mqclnzqh8krg8b3z
+                        icon: 'mdi:replay'
+                        tap_action:
+                          action: call-service
+                          service_data:
+                            entity_id: scene.mqclnzqh8krg8b3z
+                          service: scene.turn_on   
+                      - entity: scene.wbof1uct51ksyfag
+                        icon: 'mdi:none'
+                        tap_action:
+                          action: none
+                          service_data:
+                            entity_id: 
+                      - entity: scene.ntozklewkneyynxf
+                        icon: 'mdi:chevron-up'
+                        tap_action:
+                          action: call-service
+                          service_data:
+                            entity_id: scene.ntozklewkneyynxf
+                          service: scene.turn_on   
+                      - entity: scene.wbof1uct51ksyfag
+                        icon: 'mdi:none'
+                        tap_action:
+                          action: none
+                          service_data:
+                            entity_id: 
+                      - entity: scene.rncy9hk17p1ac4qv
+                        icon: 'mdi:chevron-left'
+                        tap_action:
+                          action: call-service
+                          service_data:
+                            entity_id: scene.rncy9hk17p1ac4qv
+                          service: scene.turn_on   
+                      - entity: scene.tqmfdc96rlrvtbp2
+                        icon: 'mdi:minus-circle-outline'
+                        tap_action:
+                          action: call-service
+                          service_data:
+                            entity_id: scene.tqmfdc96rlrvtbp2
+                          service: scene.turn_on   
+                      - entity: scene.h8ro3bmjway9j4nl
+                        icon: 'mdi:chevron-right'
+                        tap_action:
+                          action: call-service
+                          service_data:
+                            entity_id: scene.h8ro3bmjway9j4nl
+                          service: scene.turn_on   
+                      - entity: scene.wbof1uct51ksyfag
+                        icon: 'mdi:none'
+                        tap_action:
+                          action: none
+                          service_data:
+                            entity_id: 
+                      - entity: scene.anacsecztvw4xle7 
+                        icon: 'mdi:chevron-down'
+                        tap_action:
+                          action: call-service
+                          service_data:
+                            entity_id: scene.anacsecztvw4xle7
+                          service: scene.turn_on   
+                      - entity: scene.wbof1uct51ksyfag
+                        icon: 'mdi:none'
+                        tap_action:
+                          action: none
+                          service_data:
+                            entity_id: 
+                      - entity: scene.olh3nks5h8z0bldu
+                        icon: 'mdi:arrow-up'
+                        tap_action:
+                          action: call-service
+                          service_data:
+                            entity_id: scene.olh3nks5h8z0bldu
+                          service: scene.turn_on   
+                      - entity: scene.wbof1uct51ksyfag
+                        icon: 'mdi:none'
+                        tap_action:
+                          action: none
+                          service_data:
+                            entity_id: 
+                      - entity: scene.oyand23kbhzzlgop
+                        icon: 'mdi:arrow-down'
+                        tap_action:
+                          action: call-service
+                          service_data:
+                            entity_id: scene.oyand23kbhzzlgop
+                          service: scene.turn_on   
+
+              - break
+### Controles Smart TV
+      - type: vertical-stack
+        cards:
+          - type: custom:layout-card
+            layout: vertical    
+            cards:
+              - type: custom:button-card
+                name: Aplicativos
+                styles:
+                  card:
+                    - height: 20px
+                    - -webkit-box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                    - box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+#                        - background-color: '#363636'
+                    - opacity: 0.8
+                  name:
+                    - font-weight: 500
+                    - font-size: 16px
+                  state:
+                    - font-size: 12px
+              - type: horizontal-stack
+                cards:
+                  - type: custom:button-card
+#                    icon: 'mdi:laptop'
+                    name: PC
+                    show_name: false
+                    show_entity_picture: true
+                    entity_picture: /local/pc.png
+                    entity: scene.uvlyztmaxekzijja
+                    aspect_ratio: 1/1
+                    size: 70%
+                    styles:
+                      card:
+                        - -webkit-box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - background-color: '#363636'
+                        - opacity: 0.8
+                      name:
+                        - font-weight: 500
+                        - font-size: 12px
+                      state:
+                        - font-size: 12px
+                    tap_action:
+                      action: call-service
+                      service_data:
+                        entity_id: scene.uvlyztmaxekzijja
+                      service: scene.turn_on             
+
+                  - type: custom:button-card
+#                    icon: 'mdi:laptop'
+                    name: Notebook
+                    show_name: false
+                    show_entity_picture: true
+                    entity_picture: /local/pc.png
+                    entity: scene.2zrzraysq0fhsfpe
+                    aspect_ratio: 1/1
+                    size: 70%
+                    styles:
+                      card:
+                        - -webkit-box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - background-color: '#363636'
+                        - opacity: 0.8
+                      name:
+                        - font-weight: 500
+                        - font-size: 12px
+                      state:
+                        - font-size: 12px
+                    tap_action:
+                      action: call-service
+                      service_data:
+                        entity_id: scene.2zrzraysq0fhsfpe
+                      service: scene.turn_on             
+
+
+                  - type: custom:button-card
+#                    icon: 'mdi:television'
+                    name: Net
+                    show_name: false
+                    show_entity_picture: true
+                    entity_picture: /local/net.png
+                    entity: scene.ozwxo0bhrnqqmfjw
+                    aspect_ratio: 1/1
+                    size: 70%
+                    styles:
+                      card:
+                        - -webkit-box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - background-color: '#363636'
+                        - opacity: 0.8
+                      name:
+                        - font-weight: 500
+                        - font-size: 12px
+                      state:
+                        - font-size: 12px
+                    tap_action:
+                      action: call-service
+                      service_data:
+                        entity_id: scene.ozwxo0bhrnqqmfjw
+                      service: scene.turn_on             
+
+                  - type: custom:button-card
+#                    icon: 'mdi:television'
+                    name: Netflix
+                    show_name: false
+                    show_entity_picture: true
+                    entity_picture: /local/netflix.png
+                    entity: scene.2pulrmr2lu9ubksv
+                    aspect_ratio: 1/1
+                    size: 70%
+                    styles:
+                      card:
+                        - -webkit-box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - background-color: '#363636'
+                        - opacity: 0.8
+                      name:
+                        - font-weight: 500
+                        - font-size: 12px
+                      state:
+                        - font-size: 12px
+                    tap_action:
+                      action: call-service
+                      service_data:
+                        entity_id: scene.2pulrmr2lu9ubksv
+                      service: scene.turn_on             
+
+                  - type: custom:button-card
+#                    icon: 'mdi:television'
+                    name: Primevideo
+                    show_name: false
+                    show_entity_picture: true
+                    entity_picture: /local/prime.png
+                    entity: scene.y0lmwcb1urtyft1b
+                    aspect_ratio: 1/1
+                    size: 60%
+                    styles:
+                      card:
+                        - -webkit-box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - background-color: '#363636'
+                        - opacity: 0.8
+                      name:
+                        - font-weight: 500
+                        - font-size: 12px
+                      state:
+                        - font-size: 12px
+                    tap_action:
+                      action: call-service
+                      service_data:
+                        entity_id: scene.y0lmwcb1urtyft1b
+                      service: scene.turn_on                                   
+
+                  - type: custom:button-card
+#                    icon: 'mdi:television'
+                    name: YouTube
+                    show_name: false
+                    show_entity_picture: true
+                    entity_picture: /local/youtube.png
+                    entity: scene.msbzpa32ebhfrqje
+                    aspect_ratio: 1/1
+                    size: 60%
+                    styles:
+                      card:
+                        - -webkit-box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - background-color: '#363636'
+                        - opacity: 0.8
+                      name:
+                        - font-weight: 500
+                        - font-size: 12px
+                      state:
+                        - font-size: 12px
+                    tap_action:
+                      action: call-service
+                      service_data:
+                        entity_id: scene.msbzpa32ebhfrqje
+                      service: scene.turn_on    

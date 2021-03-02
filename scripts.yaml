@@ -1,0 +1,37 @@
+####################################################################################################
+#
+#    Exemplo de Script para numeração dos canais
+#
+####################################################################################################
+
+
+### Canais da Net
+# 1 scene.pdfetmpdu2vxkc4s
+# 2 scene.axnotfmhb2xjk2nx
+# 3 scene.lad2b4jid2nzov3s
+# 4 scene.aiagmq3z7x829moq
+# 5 scene.jilwsbwyj7os6ri0
+# 6 scene.nbwcu1ldbnrkltbi
+# 7 scene.e87brj4yq6a7srea
+# 8 scene.f8elsioug4id6lo2
+# 9 scene.osam4gdegofaqvfs
+# 0 scene.zqbf8c0jbruqzvcn
+###
+
+### Filmes e Series
+
+ae:
+  alias: AE #2
+  sequence:
+  - scene: scene.axnotfmhb2xjk2nx
+  mode: single
+
+viva: #273
+  alias: Viva
+  sequence:
+  - scene: scene.axnotfmhb2xjk2nx
+  - delay: '1'
+  - scene: scene.e87brj4yq6a7srea
+  - delay: '1'
+  - scene: scene.lad2b4jid2nzov3s
+  mode: single

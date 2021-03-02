@@ -1,0 +1,149 @@
+####################################################################################################
+#
+#    Exemplo de botões para os canais
+#
+####################################################################################################
+    title: Canais
+    path: canais
+    icon: 'mdi:television-guide'
+
+    badges: []
+    cards:
+
+### Controles Canais FreeSky
+      - type: vertical-stack
+        cards:
+          - type: custom:layout-card
+            layout: vertical    
+            cards:
+              - type: custom:button-card
+                name: Filmes e Series
+                styles:
+                  card:
+                    - height: 20px
+                    - -webkit-box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                    - box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+#                        - background-color: '#363636'
+                    - opacity: 0.8
+                  name:
+                    - font-weight: 500
+                    - font-size: 16px
+                  state:
+                    - font-size: 12px
+              - type: horizontal-stack
+                cards:
+                  - type: custom:button-card
+#                    icon: 'mdi:television-box'
+                    name: HBO
+                    show_name: true
+                    show_entity_picture: true
+                    entity_picture: /local/hbo_.png
+                    entity: script.hbo
+                    aspect_ratio: 1/1
+                    size: 70%
+                    styles:
+                      card:
+                        - -webkit-box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - background-color: '#363636'
+                        - opacity: 0.8
+                      name:
+                        - font-weight: 500
+                        - font-size: 10px
+                      state:
+                        - font-size: 10px
+                    tap_action:
+                      action: call-service
+                      service: script.hbo
+                  - type: custom:button-card
+#                    icon: 'mdi:television-box'
+                    name: HBO 2
+                    show_name: true
+                    show_entity_picture: true
+                    entity_picture: /local/hbo_2.png
+                    entity: script.hbo2
+                    aspect_ratio: 1/1
+                    size: 70%
+                    styles:
+                      card:
+                        - -webkit-box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - background-color: '#363636'
+                        - opacity: 0.8
+                      name:
+                        - font-weight: 500
+                        - font-size: 10px
+                      state:
+                        - font-size: 10px
+                    tap_action:
+                      action: call-service
+                      service: script.hbo2
+                  - type: custom:button-card
+#                    icon: 'mdi:television-box'
+                    name: Plus
+                    show_name: true
+                    show_entity_picture: true
+                    entity_picture: /local/hbo_plus.png
+                    entity: script.hbo_plus
+                    aspect_ratio: 1/1
+                    size: 70%
+                    styles:
+                      card:
+                        - -webkit-box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - background-color: '#363636'
+                        - opacity: 0.8
+                      name:
+                        - font-weight: 500
+                        - font-size: 10px
+                      state:
+                        - font-size: 10px
+                    tap_action:
+                      action: call-service
+                      service: script.hbo_plus
+                  - type: custom:button-card
+#                    icon: 'mdi:television-box'
+                    name: Signature
+                    show_name: true
+                    show_entity_picture: true
+                    entity_picture: /local/hbosig.png
+                    entity: script.hbo_signature
+                    aspect_ratio: 1/1
+                    size: 70%
+                    styles:
+                      card:
+                        - -webkit-box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - background-color: '#363636'
+                        - opacity: 0.8
+                      name:
+                        - font-weight: 500
+                        - font-size: 10px
+                      state:
+                        - font-size: 10px
+                    tap_action:
+                      action: call-service
+                      service: script.hbo_signature
+                  - type: custom:button-card
+#                    icon: 'mdi:television-box'
+                    name: Mundi
+                    show_name: true
+                    show_entity_picture: true
+                    entity_picture: /local/hbomundi.png
+                    entity: script.hbo_mundi
+                    aspect_ratio: 1/1
+                    size: 70%
+                    styles:
+                      card:
+                        - -webkit-box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - box-shadow: 0px 0px 5px 3px var(--button-card-light-color)
+                        - background-color: '#363636'
+                        - opacity: 0.8
+                      name:
+                        - font-weight: 500
+                        - font-size: 10px
+                      state:
+                        - font-size: 10px
+                    tap_action:
+                      action: call-service
+                      service: script.hbo_mundi
